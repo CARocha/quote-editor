@@ -5,6 +5,7 @@
       <%= button_to "Delete",
                   quote_path(quote),
                   method: :delete,
+                  form: { data: { turbo_frame: "_top" } },
                   class: "btn btn--primary" %>
       <%= link_to "Edit",
                 edit_quote_path(quote),
