@@ -2,8 +2,9 @@
   <div class="header">
     <h1>Quotes</h1>
     <%= link_to "New quote",
-                new_quote_path,
-                class: "btn btn--primary" %>
+                  new_quote_path,
+                  data: { turbo_frame: "_top" },
+                  class: "btn btn--primary" %>
   </div>
   <%= render @quotes %>
 </main>
