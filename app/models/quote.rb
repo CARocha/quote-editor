@@ -1,6 +1,6 @@
 # app/models/quote.rb
 class Quote < ApplicationRecord
-
+  belongs_to :company
   # Validations
   validates :name, presence: true
 
