@@ -1,6 +1,7 @@
 # app/models/quote.rb
 class Quote < ApplicationRecord
   belongs_to :company
+  has_many :line_item_dates, dependent: :destroy
   # Validations
   validates :name, presence: true
 
