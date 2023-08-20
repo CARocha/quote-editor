@@ -4,6 +4,7 @@ class QuotesTest < ApplicationSystemTestCase
   setup do
     login_as users(:accountant)
     @quote = Quote.ordered.first
+    @line_item_date = line_item_dates(:today)
   end
 
   test 'Creating a new quote' do
