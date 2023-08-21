@@ -41,8 +41,9 @@ class QuotesTest < ApplicationSystemTestCase
   test 'Destroying a quote' do
     visit quotes_path
     assert_text @quote.name
-
-    click_on 'Delete', match: :first
+    accept_alert do
+      click_on 'Delete', match: :first
+    end
     assert_no_text @quote.name
   end
 end
